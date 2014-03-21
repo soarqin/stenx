@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="storage">
+      <UniqueIdentifier>{877427ea-ba8c-4643-baf6-1f97c275a546}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="logic">
+      <UniqueIdentifier>{e3b3e0ae-e663-487f-8567-a14429b7d954}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data">
+      <UniqueIdentifier>{c3b9f0e3-50be-4f3b-87c9-03baf925b6f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{d726b619-61c2-47d3-b342-9ed94d0e64dc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="storage\LZ4Ar.cpp">
+      <Filter>storage</Filter>
+    </ClCompile>
+    <ClCompile Include="config.cpp" />
+    <ClCompile Include="storage\lz4.c">
+      <Filter>storage</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\lz4hc.c">
+      <Filter>storage</Filter>
+    </ClCompile>
+    <ClCompile Include="storage\xxhash.c">
+      <Filter>storage</Filter>
+    </ClCompile>
+    <ClCompile Include="data\Map.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="data\Block.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="data\Building.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="data\Hero.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="data\Person.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="data\Ground.cpp">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\MapLayer.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\GameWindow.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="storage\LZ4Ar.h">
+      <Filter>storage</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h" />
+    <ClInclude Include="storage\lz4.h">
+      <Filter>storage</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\lz4hc.h">
+      <Filter>storage</Filter>
+    </ClInclude>
+    <ClInclude Include="storage\xxhash.h">
+      <Filter>storage</Filter>
+    </ClInclude>
+    <ClInclude Include="data\Map.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="data\Block.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="data\Building.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="data\Ground.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="data\Hero.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="data\Person.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\MapLayer.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\GameWindow.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
