@@ -36,6 +36,7 @@
     </ClCompile>
     <ClCompile Include="ui\GameWindow.cpp" />
     <ClCompile Include="ui\MapLayer.cpp" />
+    <ClCompile Include="ui\Menu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="config.h" />
@@ -51,6 +52,7 @@
     <ClInclude Include="storage\xxhash.h" />
     <ClInclude Include="ui\GameWindow.h" />
     <ClInclude Include="ui\MapLayer.h" />
+    <ClInclude Include="ui\Menu.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{360ECAAB-0F7C-41B0-B032-07D069B51A7D}</ProjectGuid>

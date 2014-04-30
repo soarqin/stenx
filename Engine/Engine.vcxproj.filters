@@ -52,6 +52,9 @@
     <ClCompile Include="ui\GameWindow.cpp">
       <Filter>ui</Filter>
     </ClCompile>
+    <ClCompile Include="ui\Menu.cpp">
+      <Filter>ui</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="storage\LZ4Ar.h">
@@ -89,6 +92,9 @@
       <Filter>ui</Filter>
     </ClInclude>
     <ClInclude Include="ui\GameWindow.h">
+      <Filter>ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\Menu.h">
       <Filter>ui</Filter>
     </ClInclude>
   </ItemGroup>

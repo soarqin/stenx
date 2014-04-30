@@ -1,6 +1,9 @@
 #ifndef _GAMEWINDOW_H_
 #define _GAMEWINDOW_H_
 
+#include "SFML/Graphics.hpp"
+#include "SFGUI/SFGUI.hpp"
+
 namespace engine {
 namespace ui {
 
@@ -18,7 +21,9 @@ protected:
   GameWindow(int, int, const std::string &, bool);
 
 protected:
-  void * window;
+  sf::RenderWindow window;
+  sfg::SFGUI sfgui;
+  sfg::Desktop desktop;
 };
 
 }

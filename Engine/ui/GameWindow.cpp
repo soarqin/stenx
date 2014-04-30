@@ -1,8 +1,5 @@
 #include "config.h"
 
-#include "SFML/Window.hpp"
-#include "SFML/Graphics.hpp"
-
 #include "GameWindow.h"
 
 namespace engine {
@@ -16,27 +13,28 @@ GameWindow::Ptr GameWindow::CreateFullscreen(int w, int h, const std::string &n)
   return Ptr(new GameWindow(w, h, n, true));
 }
 
-GameWindow::GameWindow(int w, int h, const std::string &n, bool f) {
-  window = new sf::RenderWindow(sf::VideoMode(w, h), n, f ? sf::Style::Fullscreen : sf::Style::Default);
+GameWindow::GameWindow(int w, int h, const std::string &n, bool f): window(sf::VideoMode(w, h), n, f ? sf::Style::Fullscreen : sf::Style::Default), sfgui(), desktop() {
 }
 
 GameWindow::~GameWindow() {
-  delete static_cast<sf::RenderWindow*>(window);
 }
 
 void GameWindow::Loop() {
-  auto& win = *static_cast<sf::RenderWindow*>(window);
-  while (win.isOpen())
+  while (window.isOpen())
   {
     sf::Event event;
-    while (win.pollEvent(event))
+    while (window.pollEvent(event))
     {
+      desktop.HandleEvent(event);
       if (event.type == sf::Event::Closed)
-        win.close();
+        window.close();
     }
 
-    win.clear();
-    win.display();
+    desktop.Update(1.0f);
+
+    window.clear();
+    sfgui.Display(window);
+    window.display();
   }
 }
 
