@@ -3,6 +3,7 @@
 
 #include "SFML/Graphics.hpp"
 #include "SFGUI/SFGUI.hpp"
+#include "Menu.h"
 
 namespace engine {
 namespace ui {
@@ -17,13 +18,15 @@ public:
 
   void Loop();
 
+  Menu::Ptr AddMenu();
+
 protected:
   GameWindow(int, int, const std::string &, bool);
 
 protected:
-  sf::RenderWindow window;
   sfg::SFGUI sfgui;
   sfg::Desktop desktop;
+  sf::RenderWindow window;
 };
 
 }
