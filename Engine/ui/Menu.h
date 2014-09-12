@@ -2,29 +2,31 @@
 #define _MENU_H_
 
 #include "SFML/Graphics.hpp"
-#include "SFGUI/SFGUI.hpp"
+
+namespace tgui {
+class Panel;
+}
 
 namespace engine {
 namespace ui {
 
 class Menu {
-  friend class GameWindow;
+    friend class GameWindow;
 public:
-  typedef std::shared_ptr<Menu> Ptr;
+    typedef std::shared_ptr<Menu> Ptr;
 
-  void AddItem(const std::wstring& name);
-  void SetSpacing(float spacing);
-  void MoveDelta(float x, float y);
-  void MoveTo(float x, float y);
-  void MoveCenter();
-
-private:
-  Menu();
+    void AddItem(const std::wstring& name);
+//    void SetSpacing(float spacing);
+    void MoveDelta(float x, float y);
+    void MoveTo(float x, float y);
+    void MoveCenter();
 
 private:
-  sf::RenderWindow *parent;
-  sfg::Window::Ptr win;
-  sfg::Box::Ptr box;
+    Menu();
+
+private:
+    sf::RenderWindow *parent = nullptr;
+    tgui::Panel *panel = nullptr;
 };
 
 }

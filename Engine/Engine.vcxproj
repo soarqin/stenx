@@ -90,7 +90,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;SFML_STATIC;SFGUI_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.;D:\Dev\SFML\include;D:\Dev\SFGUI\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;D:\Dev\SFML\include;D:\Dev\TGUI\include</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile>config.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>

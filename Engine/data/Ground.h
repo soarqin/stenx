@@ -6,18 +6,18 @@
 namespace engine {
 namespace data {
 
-class Ground: public Block {
+class Ground : public Block {
 public:
-  typedef std::shared_ptr<Block> Ptr;
-  virtual ~Ground();
+    typedef std::shared_ptr<Block> Ptr;
+    virtual ~Ground();
 
-  inline int GetGrType() { return grType; }
-
-protected:
-  Ground(int, int, int);
+    inline int GetGrType() { return grType; }
 
 protected:
-  int grType;
+    Ground(int, int, int);
+
+protected:
+    int grType;
 };
 
 }

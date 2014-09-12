@@ -2,31 +2,34 @@
 #define _GAMEWINDOW_H_
 
 #include "SFML/Graphics.hpp"
-#include "SFGUI/SFGUI.hpp"
 #include "Menu.h"
+
+
+namespace tgui {
+class Gui;
+}
 
 namespace engine {
 namespace ui {
 
 class GameWindow {
 public:
-  typedef std::shared_ptr<GameWindow> Ptr;
-  static Ptr CreateWindowed(int, int, const std::string &);
-  static Ptr CreateFullscreen(int, int, const std::string &);
+    typedef std::shared_ptr<GameWindow> Ptr;
+    static Ptr CreateWindowed(int, int, const std::string &);
+    static Ptr CreateFullscreen(int, int, const std::string &);
 
-  virtual ~GameWindow();
+    virtual ~GameWindow();
 
-  void Loop();
+    void Loop();
 
-  Menu::Ptr AddMenu();
-
-protected:
-  GameWindow(int, int, const std::string &, bool);
+    Menu::Ptr AddMenu();
 
 protected:
-  sfg::SFGUI sfgui;
-  sfg::Desktop desktop;
-  sf::RenderWindow window;
+    GameWindow(int, int, const std::string &, bool);
+
+protected:
+    sf::RenderWindow window;
+    tgui::Gui *gui;
 };
 
 }

@@ -5,17 +5,16 @@ namespace engine {
 namespace data {
 
 Map::Ptr Map::Create(int w, int h) {
-  return Ptr(new Map(w, h));
+    return Ptr(new Map(w, h));
 }
 
 Map::Map(int w, int h) {
-  width = w;
-  height = h;
-  blocks.resize(h * width + w);
+    width = w;
+    height = h;
+    blocks.resize(h * width + w);
 }
 
-Map::~Map() {
-}
+Map::~Map() {}
 
 }
 }
