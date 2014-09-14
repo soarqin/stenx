@@ -14,7 +14,10 @@ GameWindow::Ptr GameWindow::CreateFullscreen(int w, int h, const std::string &n)
     return Ptr(new GameWindow(w, h, n, true));
 }
 
-GameWindow::GameWindow(int w, int h, const std::string &n, bool f) : window(sf::VideoMode(w, h), n, f ? sf::Style::Fullscreen : sf::Style::Default), gui(nullptr) {
+GameWindow::GameWindow(int w, int h, const std::string &n, bool f) {
+    auto *win = new sf::RenderWindow(sf::VideoMode(w, h), n, f ? sf::Style::Fullscreen : sf::Style::Default);
+    win->setVerticalSyncEnabled(true);
+    window = win;
     gui = new tgui::Gui(window);
     gui->setGlobalFont("C:/Windows/fonts/Consola.ttf");
 }
