@@ -14,10 +14,8 @@ GameWindow::Ptr GameWindow::CreateFullscreen(int w, int h, const std::string &n)
     return Ptr(new GameWindow(w, h, n, true));
 }
 
-GameWindow::GameWindow(int w, int h, const std::string &n, bool f) {
-    auto *win = new sf::RenderWindow(sf::VideoMode(w, h), n, f ? sf::Style::Fullscreen : sf::Style::Default);
-    win->setVerticalSyncEnabled(true);
-    window = win;
+GameWindow::GameWindow(int w, int h, const std::string &n, bool f): window(sf::VideoMode(w, h), n, f ? sf::Style::Fullscreen : sf::Style::Default) {
+    window.setVerticalSyncEnabled(true);
     gui = new tgui::Gui(window);
     gui->setGlobalFont("C:/Windows/fonts/Consola.ttf");
 }
@@ -78,7 +76,7 @@ void GameWindow::Loop() {
                 // Get the username and password
 //                 tgui::EditBox::Ptr editBoxUsername = gui.get("Username");
 //                 tgui::EditBox::Ptr editBoxPassword = gui.get("Password");
-// 
+//
 //                 sf::String username = editBoxUsername->getText();
 //                 sf::String password = editBoxPassword->getText();
 
@@ -96,7 +94,8 @@ void GameWindow::Loop() {
 Menu::Ptr GameWindow::AddMenu() {
     auto *menu = new Menu;
     menu->parent = &window;
-    tgui::Panel::Ptr panel(*gui);
+    auto panel = tgui::Panel::create();
+    gui->add(panel);
     menu->panel = panel.get();
     return Menu::Ptr(menu);
 }

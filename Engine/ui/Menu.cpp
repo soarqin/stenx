@@ -10,8 +10,8 @@ namespace ui {
 Menu::Menu() {}
 
 void Menu::AddItem(const std::wstring& name) {
-    tgui::Button::Ptr button(*panel);
-    button->load("../widgets/Black.conf");
+    auto button = tgui::Button::create("../widgets/Black.conf");
+    panel->add(button);
     button->setSize(260, 60);
     button->setText(name);
 //    button->bindCallback(tgui::Button::LeftMouseClicked);
