@@ -69,10 +69,10 @@ void GameWindow::Loop() {
             gui->handleEvent(event);
         }
 
-        tgui::Callback callback;
-        while (gui->pollCallback(callback)) {
+//        tgui::Callback callback;
+//        while (gui->pollCallback(callback)) {
             // Make sure tha callback comes from the button
-            if (callback.id == 1) {
+//            if (callback.id == 1) {
                 // Get the username and password
 //                 tgui::EditBox::Ptr editBoxUsername = gui.get("Username");
 //                 tgui::EditBox::Ptr editBoxPassword = gui.get("Password");
@@ -81,8 +81,8 @@ void GameWindow::Loop() {
 //                 sf::String password = editBoxPassword->getText();
 
                 // Continue here by checking if the username and password are correct ...
-            }
-        }
+//            }
+//        }
 
         window.clear();
         window.draw(background_sprite);

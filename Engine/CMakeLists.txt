@@ -14,7 +14,7 @@ if(BUILD_SHARED_LIBS)
 
     # the library should be linked to sfml, unless you are on linux
     if (NOT SFML_OS_LINUX)
-        target_link_libraries( Engine ${TGUI_LIBRARIES} ${SFML_LIBRARIES} ${SFML_DEPENDENCIES} ${OPENGL_gl_LIBRARY} )
+        target_link_libraries( Engine ${TGUI_LIBRARY} ${SFML_LIBRARIES} ${SFML_DEPENDENCIES} ${OPENGL_gl_LIBRARY} )
 
         # on Windows/gcc get rid of "lib" prefix for shared libraries,
         # and transform the ".dll.a" suffix into ".a" for import libraries

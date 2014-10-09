@@ -13,7 +13,7 @@ endmacro()
 # this has to be done before the project() instruction!
 set_option_default(CMAKE_BUILD_TYPE Release STRING "Choose the type of build (Debug or Release)")
 
-list(INSERT CMAKE_MODULE_PATH 0 "${CMAKE_SOURCE_DIR}/cmake")
+list(INSERT CMAKE_MODULE_PATH 0 "${CMAKE_SOURCE_DIR}/cmake" "${CMAKE_SOURCE_DIR}/cmake/Modules")
 
 # project name
 project(StenX)
